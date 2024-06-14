@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Conversor de Tallas de Calzado</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Conversor de Tallas de Calzado</h1>
+    <label for="talla">Introduce tu talla de calzado:</label>
+    <input type="number" id="talla" list="sugerencias" placeholder="Talla">
+    <datalist id="sugerencias"></datalist>
+    <label for="pais">Elige el país de origen:</label>
+    <select id="pais" onchange="actualizarSugerencias()">
+        <option value="US">EE.UU.</option>
+        <option value="EU">Europa</option>
+        <option value="UK">Reino Unido</option>
+        <option value="MX">México</option>
+    </select>
+    <button onclick="convertir()">Convertir</button>
+    <div id="result"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
